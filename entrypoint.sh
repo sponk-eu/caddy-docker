@@ -5,6 +5,6 @@ set -o nounset
 
 cmd="$*"
 
-cat $CADDY_FILE > Caddyfile
+cat $CADDY_FILE > /etc/Caddyfile
 
 exec $cmd
