@@ -25,4 +25,4 @@ COPY entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
 
 ENTRYPOINT ["/entrypoint.sh"]
-CMD ["/usr/bin/caddy", "--conf", "/etc/Caddyfile", "--log", "stdout"]
+CMD ["/usr/bin/caddy", "--conf", "/etc/Caddyfile", "--log", "stdout", "--email", "$TLS_EMAIL", "--agree"]
