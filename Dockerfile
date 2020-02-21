@@ -20,6 +20,7 @@ EXPOSE 80 443 2015
 VOLUME /root/.caddy
 
 COPY Caddyfile /etc/Caddyfile
+COPY entrypoint.sh /entrypoint.sh
 
-ENTRYPOINT ["/usr/bin/caddy"]
-CMD ["--conf", "/etc/Caddyfile", "--log", "stdout"]
+ENTRYPOINT ["/entrypoint.sh"]
+CMD ["/usr/bin/caddy", "--conf", "/etc/Caddyfile", "--log", "stdout"]
